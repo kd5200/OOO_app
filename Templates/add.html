@@ -1,0 +1,57 @@
+{% extends 'base.html' %} {% block title %} Add Event {% endblock title %} {%
+    block body %}
+    <div class="container">
+      <form action="/cal" method="POST">
+        <div class="mb-3">
+          <label for="title" class="form-label">title</label>
+          <input
+            type="text"
+            class="form-control"
+            name="title"
+            id="title"
+            value="{{events_title}}"
+            placeholder="Who is OOO?"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="start" class="form-label">Start Date</label>
+          <input
+            type="date"
+            class="form-control"
+            name="start"
+            id="start"
+            value="{{events_start}}"
+            placeholder="yyyy-mm-dd"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="end" class="form-label">End Date</label>
+          <input
+            type="date"
+            class="form-control"
+            name="end"
+            id="end"
+            value="{{events_end}}"
+            placeholder=""
+          />
+        </div>
+        <div class="mb-3">
+          <label for="url" class="form-label">url</label>
+          <input
+            type="text"
+            class="form-control"
+            name="url"
+            id="url"
+            value="{{events_url}}"
+            placeholder=""
+          />
+        </div>
+        <input type="submit" value="Add Event" />
+        <button>
+            <ion-icon name="trash">Delete</ion-icon>
+          </a>
+        </button>
+      </form>
+    </div>
+    {% endblock body %}
+    
